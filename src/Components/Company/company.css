@@ -1,0 +1,46 @@
+.Company{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 50px;
+    /* justify-content: center; */
+}
+.company-image{
+    width: 40vw;
+    height: 30vw;
+    z-index: 10;
+
+    /* background-color: yellow; */
+}
+.company-card{
+   
+    z-index: -1;
+    height: 35vw; 
+    width: 80vw;
+    color: white;
+    background-color: #100534;
+    /* background-color: blue; */
+    display: flex;
+    align-items: start;
+    text-align: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+
+@media only screen and (max-width: 900px){
+    /*Tablets [601px -> 1200px]*/
+    .promotion-cards{
+        flex-direction: column;
+    }
+    .company-image{
+        display: none;
+    }
+    .company-card{
+        width: 90vw;
+        height: 100%;
+    }
+    
+}

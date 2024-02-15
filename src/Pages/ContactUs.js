@@ -1,0 +1,135 @@
+import { useState } from "react";
+import React from "react";
+import axios from 'axios';
+import "./radical.css";
+
+const api = 'https://Make My Bucket-travel.onrender.com/api/contact'
+export default function ContactUs() {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [isSucess, setSucess] = useState('green');
+
+  const handleSubmit = async (event) => {
+    try {
+      event.preventDefault();
+      console.log({ fullName, email, message });
+      const response = await axios.post(`${api}/create`, {
+        fullName,
+        email,
+        message,
+      });
+      const data = response.data
+      console.log(" Respone ", response);
+      if (data.success) {
+        // Display the success message
+        console.log("Success:", response.data);
+        setMessage('');
+        setEmail('');
+        setFullName('')
+        setSubmitMessage("Thank you for contacting us! We'll get back to you soon.")
+        setSucess('green')
+      } else {
+        setSubmitMessage('Unable to submitt form')
+        setSucess('red')
+        console.log("Unexpected response:", response);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+
+  };
+  return (
+    <div className="ContactUs flex flex-col justify-center overflow-x-hidden font-nunito">
+      <div className="header-contact-us Poster w-[1920px] h-[400px] bg-[url(/public/image87@2x.png)] bg-cover bg-no-repeat bg-[top] font-lato">
+        <div className="font-semibold [text-shadow:0px_2px_3px_rgba(0,_0,_0,_0.25)] font-nunito">
+          Contact us
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div className="main-contact-us flex justify-center">
+        <div className="image-section ">
+          <img
+            className="hidden md:block rounded-3xs w-[430px] h-[580px] mb-12  mr-12 object-cover"
+            alt=""
+            src="/unsplashtyandmpxwhc@2x.png"
+          />
+        </div>
+
+        <div className=" mt-[-50px] md:mt-0 flex flex-col ">
+          <div className="font-bold  md:font-extrabold font-nunito">
+            <h1 className=" md:pr-96 text-[40px]">Contact Us</h1>
+          </div>
+          <div className="flex flex-col md:flex-row">
+            <div className="contact-form">
+              <form onSubmit={handleSubmit}>
+                <div className="form-field " >
+                  <input
+                    type="text"
+                    className="custom-fields"
+                    placeholder="Full Name"
+                    value={fullName}
+                    required={true}
+                    onChange={(event) => setFullName(event.target.value)}
+                  />
+                  <div className="form-line"></div>
+                </div>
+                <div className="form-field">
+                  <input
+                    className="custom-fields"
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    required={true}
+                    onChange={(event) => setEmail(event.target.value)}
+                  />
+                  <div className="form-line"></div>
+                </div>
+                <div className="form-field">
+                  <textarea
+                    className="custom-new-fields"
+                    placeholder="Message"
+                    row={4}
+                    value={message}
+                    required={true}
+                    onChange={(event) =>
+                      setMessage(event.target.value)
+                    }></textarea>
+                  <div className="form-line"></div>
+                </div>
+                <div>
+                  <label
+                    style={{ color: isSucess }}>
+                    {submitMessage}
+                  </label>
+                </div>
+                <br>
+                </br>
+                <div>
+                </div>
+                <button
+                  className="btn-contact rounded-sm bg-darkslateblue-100 flex flex-row py-6 px-[120px] items-center justify-center text-5xl text-white"
+                  type="submit"
+                  style={{ "margin-left": "50px" }}
+                >
+                  Send
+                </button>
+
+              </form>
+            </div>
+            <div className="address text-start  md:ml-24 ml-12 md:mt-16 mb-5">
+              <h2>Email</h2>
+              <a href="mailto:Make My Bucketindia@gmail.com">Make My Bucket@gmail.com</a>
+              <h2>Address</h2>
+              <p>Banjara Hills, Hyderabad, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  );
+}

@@ -1,0 +1,55 @@
+.Promotion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    /* width: 80vw; */
+}
+.promotion-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.promotion-card{
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 20px; */
+    /* align-items: center;
+    justify-content: center; */
+    overflow-x: hidden;
+
+}
+.promotion-card-image{
+    /* width: 120px;
+    height: 120px; */
+    /* background-color: black; */
+    border-radius: 5%;
+    margin: 1rem;
+}
+
+.promotion-card-detail{
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* align-items: center; */
+}
+.book-now-btn{
+}
+@media only screen and (max-width: 900px){
+    /*Tablets [601px -> 1200px]*/
+    .promotion-cards{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+}
