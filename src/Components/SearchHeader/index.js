@@ -3,10 +3,10 @@ import "./searchheader.css";
 
 export default function SearchHeader({ item }) {
   return (
-    <div className="SearchHeader">
+    <div className="SearchHeader font-nunito">
 
       <div>Home/India</div>
-      <h1 className="text-header">
+      <h1 className="text-header font-nunito">
         India Tours, Activities & Excursions
       </h1>
       <div className="tags">

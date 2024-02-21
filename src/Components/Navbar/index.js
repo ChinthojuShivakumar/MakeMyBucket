@@ -303,10 +303,10 @@ function CustomModal({ modalType }) {
   if (modalType === "experience")
     return (
       <div className="modal-display">
-        <h2 className="modal-display-header">All Experience</h2>
+        <h2 className="modal-display-header font-nunito">All Experience</h2>
         <div className="modal-list">
           {experienceList.map((expSec) => (
-            <div className="modal-list-section">
+            <div className="modal-list-section font-nunito">
               <ul>
                 {expSec ? expSec.map((exp) => <li onClick={() => navigate(`/search?category=${exp.name}&location=&activity=`)}>{exp.name}</li>) : null}
               </ul>
@@ -317,11 +317,11 @@ function CustomModal({ modalType }) {
     );
   if (modalType === "destination")
     return (
-      <div className="modal-display">
-        <h2 className="modal-display-header">All Destinations</h2>
+      <div className="modal-display font-nunito">
+        <h2 className="modal-display-header font-nunito">All Destinations</h2>
         <div className="modal-list">
           {locationList.map((expSec) => (
-            <div className="modal-list-section">
+            <div className="modal-list-section font-nunito">
               <ul>
                 {expSec ? expSec.map((exp) => <li onClick={() => navigate(`/search?category=&location=${exp.name}&activity=`)}>{exp.name}</li>) : null}
               </ul>

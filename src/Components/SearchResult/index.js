@@ -183,7 +183,7 @@ const SearchResult = () => {
   }, [locationParam, activityParam, categoryParam, locations, experiences]);
 
   return (
-    <div className="SearchResult">
+    <div className="SearchResult font-nunito">
       <div className="search-container">
         <div className="filter">
           <div className="  experience-filter">

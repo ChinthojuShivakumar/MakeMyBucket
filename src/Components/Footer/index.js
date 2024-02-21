@@ -31,9 +31,9 @@ export default function Footer() {
       <div className=" w-full flex justify-between items-center flex-col gap-5 ">
 
         <div className=" md:footer-main flex   justify-around items-start gap-6  w-[100%] max-sm:flex-col max-sm:justify-center max-sm:items-center" >
-          <div className="footer-logo my-5">
+          <div className="footer-logo my-5 ">
             <img
-              className="footer-logo overflow-hidden cursor-pointer md:w-24 md:h-24 lg:w-36 lg:h-36"
+              className="footer-logo overflow-hidden cursor-pointer  "
               alt=""
               src="/LOGO_MAKE_MY_BUCKET.png"
               onClick={() => {
