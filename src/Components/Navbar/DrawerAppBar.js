@@ -12,7 +12,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import "./navbar.css";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { logout } from "../../redux/userSlice";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -243,7 +243,7 @@ function DrawerAppBar(props) {
                     </div>
                   </button>
                 </Link>
-                <Link to="/login">
+                <NavLink to="/login">
                   <button className="py-2 px-4 bg-darkslateblue-100 rounded-md shadow-md flex items-center justify-center gap-2 border border-solid border-button-stroke">
                     <img
                       className="w-5 h-5 overflow-hidden"
@@ -254,7 +254,7 @@ function DrawerAppBar(props) {
                       Login
                     </div>
                   </button>{" "}
-                </Link>
+                </NavLink>
               </>
             )}
 

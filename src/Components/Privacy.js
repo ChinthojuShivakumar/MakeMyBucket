@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
         <>
             <DrawerAppBar />
 
-            <section className="bg-gray-100 text-start">
+            <section className="bg-gray-100 text-start font-nunito">
                 <style>
                     {`
         .section-heading {
@@ -18,8 +18,8 @@ const PrivacyPolicy = () => {
         }
         `}
                 </style>
-                <div className="px-5 py-10 bg-white max-w-4xl mx-auto pt-10">
-                    <h1 className="text-center font-sans md:text-4xl text-[30px] font-bold tracking-wide underline underline-offset-1 text-gray-900">
+                <div className="px-5 py-10 bg-white max-w-4xl mx-auto pt-10 font-nunito">
+                    <h1 className="text-center  md:text-4xl text-[30px] font-bold tracking-wide underline underline-offset-1 text-gray-900 font-nunito">
                         Privacy Policy
                     </h1>
                     <section className="grid gap-y-4">

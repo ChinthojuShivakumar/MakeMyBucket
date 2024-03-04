@@ -15,12 +15,12 @@ export default function AboutUs() {
       <br />
       <br />
       <div>
-      <div className="Company mb-10 md:ml-24 ml-5 font-nunito">
-      <div className="company-image -mt-3">
-        <LazyLoadImage className=" rounded w-[660px] h-[477px] object-cover ml-52" src="/image8@2x.png" lazy="lazy" />
+      <div className="Company mb-10 md:ml-24 ml-5 font-nunito mt-3">
+      <div className="mt-2">
+        <LazyLoadImage className=" rounded w-[660px] h-[477px] object-cover ml-40" src="/image8@2x.png" lazy="lazy" />
       </div>
 
-      <div className=" company-card   px-[2rem] py-2 md:w-full w-screen flex flex-col items-start justify-start gap-[20px]">
+      <div className=" company-card  py-2 md:w-full flex flex-col items-start justify-start">
         <div className="w-[50%] ml-64 max-sm:ml-0 max-sm:w-full">
           <h2 className=" text-[37px]">Our Company</h2>
           <div className=' bg-orange-600 p-[2px] w-48  mb-10 ml-5' ><hr /></div>

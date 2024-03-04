@@ -114,6 +114,10 @@ export default function Footer() {
 
               <li><Link to="/privacypolicy" className=" footer-link">Privacy</Link> </li>
 
+              <li className=" footer-link"> <a href="/Refund Policy for Online Adventure.docx" download="/Refund Policy for Online Adventure.docx">Refund Policy</a> </li>
+
+              
+              
 
             </ul>
           </div>

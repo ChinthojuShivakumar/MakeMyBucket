@@ -34,7 +34,7 @@ export default function AllDestination() {
     addLocationToDestinationList();
   }, []);
   return (
-    <div className="Destinaiton mt-5">
+    <div className="Destinaiton mt-5 font-nunito">
 
       <h1>All Destination & Cities</h1>
 

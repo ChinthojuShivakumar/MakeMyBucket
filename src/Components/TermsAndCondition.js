@@ -9,7 +9,7 @@ const TermsAndConditions = () => {
     <>
       <DrawerAppBar />
 
-      <section className="bg-gray-100 text-start">
+      <section className="bg-gray-100 text-start font-nunito">
 
         <style>
           {`

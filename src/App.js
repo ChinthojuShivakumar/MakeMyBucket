@@ -25,6 +25,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import TermsAndCondition from "./Components/TermsAndCondition";
 import PrivacyPolicy from "./Components/Privacy";
 import BookingDetail from "./Components/BookingDetail";
+import RefundPolicy from "./Components/RefundPolicy/Refundpolicy";
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Route path="/termsandconditions" element={<TermsAndCondition />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route path="/bookingdetail" element={<BookingDetail />} />
+          <Route path="/refund" element={<RefundPolicy />} />
 
           <Route path="*" element={<ProtectedPage><NotFound /></ProtectedPage>} />
 
